@@ -1,3 +1,20 @@
 git clone https://github.com/swafwana/SimpleBlog
 python -m venv blogenv
 blogenv\Scripts\activate
+django-admin startproject myproject
+cd myproject
+python manage.py startapp myapp
+INSTALLED_APPS = [
+    ...
+    'myapp',
+]
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Hello, this is my first Django web page!")
+
+git add .
+git commit -m "Initial commit: working Django app"
+git remote add origin https://github.com/yourusername/SimpleBlog.git
+git branch -M main
+git push -u origin main
