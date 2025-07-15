@@ -18,3 +18,4 @@ git commit -m "Initial commit: working Django app"
 git remote add origin https://github.com/yourusername/SimpleBlog.git
 git branch -M main
 git push -u origin main
+git pull origin main --allow-unrelated-histories
